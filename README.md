@@ -1,5 +1,6 @@
 # 🍽️ QRMenu SaaS — Real-Time Multi-Tenant Restaurant Ordering & KDS
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Online-success?style=for-the-badge&logo=vercel)](https://qrmenu-digital.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.4-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -9,6 +10,8 @@
 [![Prisma](https://img.shields.io/badge/Prisma-5.14-2D3748?style=for-the-badge&logo=prisma&logoColor=white)](https://www.prisma.io/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+> **Live Production Deployment:** [🚀 Live Demo](https://qrmenu-digital.vercel.app/)
 
 A modern, production-grade **Full-Stack SaaS platform** for contactless restaurant ordering, kitchen ticket execution, and real-time operations management. Built with high concurrency and instant synchronization in mind, QRMenu SaaS eliminates wait times, automates kitchen workflows, and gives restaurant owners actionable business intelligence.
 
@@ -206,8 +209,10 @@ npm run dev
 
 ## 🕹️ Interactive Demo Walkthrough
 
-1. **System Portal:** Open [http://localhost:3000](http://localhost:3000) in your browser.
-2. **Customer Menu:** Click **Customer QR Menu** or visit [http://localhost:3000/powergrill?table=5](http://localhost:3000/powergrill?table=5).
+Experience the deployed application live at **[https://qrmenu-digital.vercel.app/](https://qrmenu-digital.vercel.app/)** or test locally:
+
+1. **System Portal:** Open [https://qrmenu-digital.vercel.app/](https://qrmenu-digital.vercel.app/) (or local [http://localhost:3000](http://localhost:3000)).
+2. **Customer Menu:** Click **Customer QR Menu** or visit [https://qrmenu-digital.vercel.app/powergrill?table=5](https://qrmenu-digital.vercel.app/powergrill?table=5).
    - Add items to the cart, select modifiers, and add kitchen notes.
    - Click **Send Order to Kitchen**.
 3. **Live Kitchen KDS:** Open a second browser tab and visit the Kitchen Dashboard.
