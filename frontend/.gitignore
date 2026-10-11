@@ -1,0 +1,40 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Testing & Reports
+/coverage
+playwright-report/
+test-results/
+
+# Next.js & Production Builds
+/.next/
+/out/
+/build
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment Variables (CRITICAL - Never commit secrets)
+.env*
+!.env.example
+
+# Vercel
+.vercel
+
+# Logs & Debug
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Misc & OS
+.DS_Store
+Thumbs.db
+*.pem

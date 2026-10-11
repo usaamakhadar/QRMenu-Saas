@@ -1,0 +1,17 @@
+{
+  "name": "QRMenu POS & Digital Menu",
+  "short_name": "QRMenu",
+  "description": "Premium Restaurant POS and Digital QR Menu System",
+  "start_url": "/login",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ea580c",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Compilation Artifacts
+dist/
+build/
+*.tsbuildinfo
+
+# Testing & Reports
+coverage/
+
+# Environment Variables (CRITICAL - Never commit secrets)
+.env
+.env.*
+.env.local
+.env.development
+.env.test
+.env.production
+!.env.example
+
+# Uploads & Temporary Media
+uploads/*
+!uploads/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.pem

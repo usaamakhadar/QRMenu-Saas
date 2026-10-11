@@ -1,0 +1,87 @@
+/* Google Fonts & Material Symbols */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lexend:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-secondary-fixed: #dce2f7;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-tertiary-fixed-variant: #005137;
+  --color-secondary-container: #d9dff5;
+  --color-on-background: #191c1e;
+  --color-background-custom: #f8f9fb;
+  --color-surface-container-lowest: #ffffff;
+  --color-primary: #a04100;
+  --color-on-surface-variant: #5a4136;
+  --color-tertiary: #006c4b;
+  --color-on-tertiary-fixed: #002114;
+  --color-surface-dim: #d9dadc;
+  --color-on-secondary: #ffffff;
+  --color-tertiary-fixed: #68fcbf;
+  --color-surface-container-high: #e7e8ea;
+  --color-on-tertiary: #ffffff;
+  --color-surface-container: #edeef0;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #572000;
+  --color-tertiary-fixed-dim: #45dfa4;
+  --color-primary-fixed: #ffdbcc;
+  --color-inverse-on-surface: #f0f1f3;
+  --color-on-secondary-container: #5c6274;
+  --color-surface-bright: #f8f9fb;
+  --color-surface: #f8f9fb;
+  --color-surface-container-low: #f3f4f6;
+  --color-surface-tint: #a04100;
+  --color-surface-container-highest: #e1e2e4;
+  --color-outline: #8e7164;
+  --color-secondary-fixed-dim: #c0c6db;
+  --color-on-primary-fixed-variant: #7a3000;
+  --color-on-tertiary-container: #003925;
+  --color-surface-variant: #e1e2e4;
+  --color-error: #ba1a1a;
+  --color-on-secondary-fixed-variant: #404758;
+  --color-outline-variant: #e2bfb0;
+  --color-primary-container: #ff6b00;
+  --color-on-surface: #191c1e;
+  --color-on-primary-fixed: #351000;
+  --color-inverse-primary: #ffb693;
+  --color-tertiary-container: #00ae7a;
+  --color-on-error-container: #93000a;
+  --color-on-secondary-fixed: #141b2b;
+  --color-inverse-surface: #2e3132;
+  --color-primary-fixed-dim: #ffb693;
+  --color-secondary: #575e70;
+
+  /* Custom fonts */
+  --font-headline-xl: 'Lexend', sans-serif;
+  --font-headline-lg: 'Lexend', sans-serif;
+  --font-headline-lg-mobile: 'Lexend', sans-serif;
+  --font-headline-md: 'Lexend', sans-serif;
+  --font-price-display: 'Lexend', sans-serif;
+  --font-body-lg: 'Inter', sans-serif;
+  --font-body-md: 'Inter', sans-serif;
+  --font-body-sm: 'Inter', sans-serif;
+  --font-label-bold: 'Inter', sans-serif;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html, body {
+  overscroll-behavior-y: none;
+  overscroll-behavior-x: none;
+  touch-action: manipulation;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: max(884px, 100dvh);
+  font-family: 'Inter', sans-serif;
+}
