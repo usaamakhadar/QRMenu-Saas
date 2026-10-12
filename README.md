@@ -47,38 +47,35 @@ A modern, production-grade **Full-Stack SaaS platform** for contactless restaura
 
 ## 🏗️ System Architecture
 
-```mermaid
-flowchart TD
-    subgraph ClientLayer ["Client Applications (Next.js 16)"]
-        Diner["📱 Customer Menu\n([restaurantSlug]?table=N)"]
-        KDS["🍳 Kitchen KDS Kanban\n(/kitchen/[id]/kds)"]
-        Billing["🧾 Cashier & Billing\n(/kitchen/[id]/billing)"]
-        Admin["📊 Owner Dashboard\n(/kitchen/[id]/analytics)"]
-    end
-
-    subgraph ServerLayer ["Backend API & Real-time Server (Express & Node.js)"]
-        REST["🚀 REST API Engine\n(Express 4.19 / TypeScript)"]
-        SocketServer["⚡ Socket.io WebSocket Gateway\n(Bi-Directional Order Sync)"]
-    end
-
-    subgraph ServiceLayer ["Cloud Infrastructure & External Services"]
-        PrismaORM["🔷 Prisma ORM 5.14"]
-        PostgresDB[("🐘 PostgreSQL\n(Neon / Supabase / Local)")]
-        Cloudinary["☁️ Cloudinary Media CDN"]
-        GeminiAI["✨ Google Gemini AI\n(Menu Text Extraction)"]
-    end
-
-    Diner -->|HTTP Requests| REST
-    Diner <-->|WebSockets| SocketServer
-    KDS <-->|WebSockets| SocketServer
-    Billing -->|HTTP Requests| REST
-    Billing <-->|WebSockets| SocketServer
-    Admin -->|HTTP Requests| REST
-
-    REST --> PrismaORM
-    REST --> Cloudinary
-    REST --> GeminiAI
-    PrismaORM --> PostgresDB
+```text
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                              CLIENT TIER (Next.js 16)                                  │
+│                                                                                        │
+│  ┌───────────────────────┐  ┌───────────────────────┐  ┌────────────────────────────┐  │
+│  │   📱 Customer Menu    │  │   🍳 Kitchen KDS      │  │   🧾 Cashier & Billing     │  │
+│  │   (/[slug]?table=N)   │  │   (/kitchen/kds)      │  │   (/kitchen/billing)       │  │
+│  └───────────┬───────────┘  └───────────┬───────────┘  └─────────────┬──────────────┘  │
+└──────────────┼──────────────────────────┼────────────────────────────┼─────────────────┘
+               │ HTTP & WebSocket         │ Real-time WebSocket        │ HTTP & WebSocket
+               ▼                          ▼                            ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                         APPLICATION TIER (Node.js & Express)                           │
+│                                                                                        │
+│  ┌─────────────────────────────────────────┐  ┌─────────────────────────────────────┐  │
+│  │        🚀 REST API Services             │  │      ⚡ Socket.io Gateway           │  │
+│  │   (Auth, Orders, Menu CRUD, Analytics)  │  │   (Real-Time Multi-Room Dispatch)   │  │
+│  └────────────────────┬────────────────────┘  └──────────────────┬──────────────────┘  │
+└───────────────────────┼──────────────────────────────────────────┼─────────────────────┘
+                        │                                          │
+                        ▼                                          ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                         DATA & EXTERNAL CLOUD SERVICES TIER                            │
+│                                                                                        │
+│  ┌─────────────────────────────────────────┐  ┌─────────────────────────────────────┐  │
+│  │   🔷 Prisma ORM 5.14                    │  │   ☁️ Cloudinary (Asset CDN)         │  │
+│  │   🐘 PostgreSQL (Neon / Local DB)       │  │   ✨ Google Gemini AI (Menu Parser) │  │
+│  └─────────────────────────────────────────┘  └─────────────────────────────────────┘  │
+└────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
